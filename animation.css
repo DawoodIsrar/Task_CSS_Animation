@@ -1,0 +1,192 @@
+html {
+  background-color: black;
+}
+.color {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(100px, 100px);
+  }
+  to {
+    transform: rotate(360deg) translate(100px, 100px);
+  }
+}
+.planet {
+  width: 100px;
+  height: 100px;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+.moon {
+  background-color: aliceblue;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  animation: orbit 6000ms linear infinite;
+}
+.left {
+  height: 200px;
+  width: 200px;
+  background-color: aquamarine;
+  animation: popup;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes popup {
+  from {
+    transform: rotate(-30deg) translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
+.x-axis-animation {
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+  animation: x-axis 5s ease-out infinite;
+}
+
+@keyframes x-axis {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.spinning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+.spin {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://courses.joshwcomeau.com/cfj-mats/loader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: spin 2s ease-in-out infinite;
+  background-color: aliceblue;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin2 {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://courses.joshwcomeau.com/cfj-mats/loader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: spin2 4s ease-in-out infinite;
+  background-color: aliceblue;
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(0.2turn);
+  }
+  25% {
+    transform: rotate(0.4turn);
+  }
+  50% {
+    transform: rotate(0.6turn);
+  }
+  75% {
+    transform: rotate(0.8turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.scale {
+  width: 200px;
+  height: 200px;
+  background-color: bisque;
+  animation: scale 4s ease-in-out infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.2);
+  }
+  25% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.mark {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://courses.joshwcomeau.com/cfj-mats/help-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: blueviolet;
+  border-radius: 50px;
+  animation: pop-from-down 2s ease-in-out infinite;
+  animation-direction: reverse;
+}
+@keyframes pop-from-down {
+  to {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  from {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
+.hello {
+  margin-top: 100px;
+  width: 200px;
+  height: 200px;
+  background-color: deeppink;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes bitup {
+  to {
+    transform: translateY(0%);
+  }
+  from {
+    transform: translateY(-10%);
+  }
+}
+.hello:hover {
+  animation: bitup 2s ease-in-out 1;
+}
